@@ -1,0 +1,39 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="et">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}{% endblock %}</title>
+    {% block styles %}{% endblock %}
+    <link rel="stylesheet" href="{% static 'main/css/header.css' %}">
+    <link rel="stylesheet" href="{% static 'main/css/footer.css' %}">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Roboto&display=swap" rel="stylesheet">
+</head>
+<body onload="popup('fig1', './templates/sport.html', 'popup4'); popup('fig2', './templates/poliitika.html', 'popup2'); popup('fig3', './templates/tehnoloogia.html', 'popup6'); popup('fig4', './templates/arhitektuur.html', 'popup1'); popup('fig5', './templates/muusika.html', 'popup1');">
+    <header>
+        <a class="logo" href="{% url 'home' %}"><img src="static/images/logo.png" alt=""></a>
+        <nav class="header-nav">
+            <ul class="nav-links">
+                <li><a href="{% url 'about' %}">Meist</a></li>
+                <li><a href="{% url 'contact' %}">Kontakt</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    {% block content %}
+    {% endblock %}
+
+    <footer>
+        <div class="footer-container">
+            <div><h5>Tartu Ülikool</h5></div>
+            <div><h5>2022</h5></div>
+            <div><h5>Nikita Filin</h5></div>
+        </div>
+    </footer>
+
+
+</body>
+</html>

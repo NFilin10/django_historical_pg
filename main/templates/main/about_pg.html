@@ -1,0 +1,21 @@
+{% extends 'main/layout.html' %}
+
+{% load static %}
+
+{% block styles %}<link rel="stylesheet" href="{% static 'main/css/about_pg.css' %}">{% endblock %}
+
+{% block title %}Meist{% endblock %}
+
+{% block content %}
+<div class="pealkiri">
+        <h1>Meist</h1>
+</div>
+<div class="container">
+    <div class="pilt"><img src="../static/images/grupitöö.jpg" alt=""></div>
+    <div class="tekst">
+        <div class="kirjeldus"><p>Oleme kolm Tartu Ülikooli 1. kursuse õpilast, kes tulid informaatikat õppima. Olles väga motiveeritud ja avatud inimesed, kes tahavad palju areneda, võtame vastu kõik huvitavaid väljakutsed.</p></div>
+        <h2>Meie missioon</h2>
+        <div class="kirjeldus1"><p>Meie missiooniks on luua veebileht, mis kajastab huvitavaid ajaloolisi fotosid. Plaanime kokku koguda ajaloo kuulsaimad ja meeldejäävaimad jäädvustused ja esitleda neid kõiki ühel veebilehel. Selleks kavatseme luua erinevad kategooriad, kuhu lisame aja jooksul juurde pilte, mida inimesed saavad vaatamas käia. Tegemist on põhimõtteliselt virtuaalmuuseumiga.Meie missiooniks on luua veebileht, mis kajastab huvitavaid ajaloolisi fotosid. Plaanime kokku koguda ajaloo kuulsaimad ja meeldejäävaimad jäädvustused ja esitleda neid kõiki ühel veebilehel. Selleks kavatseme luua erinevad kategooriad, kuhu lisame aja jooksul juurde pilte, mida inimesed saavad vaatamas käia. Tegemist on "virtuaalmuuseumiga".</p></div>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,33 @@
+{% extends 'main/layout.html' %}
+
+{% load static %}
+
+{% block styles %}<link rel="stylesheet" href="{% static 'main/css/themes.css' %}">{% endblock %}
+
+{% block content %}
+{% for el in i %}
+<p class="theme-heading">{% block heading %}{% endblock %}</p>
+<div class="themes-block blur">
+    <div class="container">
+        <div class="elem">
+            <img src="{% block src %}{% endblock %}" alt="{% block alt %}{% endblock %}">
+            <p>
+                {% block article-heading %}{% endblock %}
+            </p>
+            <button class="open-popup" data-popup="{% block data-popup %}{% endblock %}">Kuva rohkem</button>
+        </div>
+    </div>
+</div>
+
+<div id="{% block id %}{% endblock %}" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <img src="{% block src1 %}{% endblock %}" alt="">
+        <p>{% block article-text %}{% endblock %}</p>
+    </div>
+</div>
+
+<script src="{% static 'main/js/popup.js' %}"></script>
+<script src="{% static 'main/js/popup_show.js' %}"></script>
+{% endfor %}
+{% endblock %}

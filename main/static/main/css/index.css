@@ -1,0 +1,479 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    /*overflow-x: hidden;*/
+}
+
+.carousel {
+    width: 100%;
+    position: relative;
+    margin: 0 auto;
+}
+
+.carousel .carousel-item,
+.carousel .carousel-item-hidden {
+    display: none;
+}
+
+.carousel .carousel-item-visible {
+    display: flex;
+    width: 100%;
+    animation: fadeVisibility 0.5s;
+}
+
+.carousel .carousel-item img {
+    width: 100%;
+    height: 650px;
+}
+
+
+.carousel .carousel-actions {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.carousel .carousel-actions button {
+    border-radius: 50px;
+    background-color: white;
+    border: 0;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+}
+
+.carousel .carousel-actions button#carousel-button-prev {
+    margin-left: 20px;
+}
+
+.carousel .carousel-actions button#carousel-button-next {
+    margin-right: 20px;
+}
+
+
+@keyframes fadeVisibility {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.themes-nav{
+    min-height: 60px;
+    display: flex;
+    align-items: center;
+}
+
+.nav-container{
+    padding-left: 10px;
+    padding-right: 10px ;
+    width:950px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-container a{
+    min-width: 170px;
+    margin-top: 30px;
+    text-decoration: none;
+    padding: 5px 10px 5px 10px;
+    border: 1.5px solid rgb(153, 153, 153);
+    font-size: 23px;
+    color: rgb(51, 51, 51);
+    text-align: center;
+}
+
+.heading{
+    max-width: 1250px;
+    margin: 0 auto;
+}
+
+.heading h1 {
+    max-width: 1250px;
+    font-weight: bold;
+    margin-top:20px;
+    font-size: 35px;
+}
+
+.section{
+    margin-top: 15px;
+    min-height: 600px;
+    margin-bottom: 10px;
+
+}
+
+.section-container{
+    max-width: 1250px;
+    margin: 0 auto;
+    gap: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.fig1 img, .fig2 img{
+
+    height: 300px;
+    width: 100%;
+}
+
+.fig1 {
+    width: 59%;
+    height: 300px;
+}
+
+.fig2 {
+    width: 39%;
+    height: 300px;
+}
+
+
+.fig3, .fig4, .fig5{
+    width: 32%;
+    height: 300px;
+
+}
+
+.fig3 img, .fig4 img, .fig5 img{
+    height: 100%;
+    width: 100%;
+}
+
+.fig1, .fig2, .fig3, .fig4, .fig5{
+    position: relative;
+    transition: all 300ms;
+}
+
+.fig1:hover, .fig2:hover, .fig3:hover, .fig4:hover, .fig5:hover{
+    transform: scale(1.05);
+    cursor: pointer;
+}
+
+.fig1 p, .fig2 p, .fig3 p, .fig4 p, .fig5 p{
+    position: absolute;
+    bottom: 8px;
+    left: 16px;
+    font-size: 20px;
+    border-radius:4px;
+    padding:4px;
+    margin:2px;
+    background-color: #D3D3D3;
+    opacity: .7;
+
+}
+
+@media (max-width: 1000px){
+    .fig1, .fig2, .fig3, .fig4, .fig5{
+        width: 46%;
+        margin-left: 10px;
+        margin-right: 10px;
+
+    }
+}
+
+@media (max-width: 700px) {
+    .carousel{
+       height: 300px;
+    }
+
+    .carousel .carousel-item img {
+        height: 300px;
+    }
+
+    .nav-container{
+        gap: 12px;
+        justify-content: center;
+    }
+
+    .heading{
+        margin-left: 10px;
+    }
+
+    .heading h1{
+        font-size: 25px;
+    }
+
+    .fig1, .fig2, .fig3, .fig4, .fig5{
+        width: 100%;
+        margin-left: 10px;
+        margin-right: 10px;
+        gap: 1px;
+    }
+
+    .fig1:hover, .fig2:hover, .fig3:hover, .fig4:hover, .fig5:hover{
+        transform: none;
+    }
+
+    .fig1, .fig2, .fig3, .fig4, .fig5{
+        transition: none;
+    }
+
+    .fig1 img:hover, .fig2 img:hover, .fig3 img:hover, .fig4 img:hover, .fig5 img:hover{
+        opacity: 0.8;
+    }
+
+    .fig1 p, .fig2 p, .fig3 p, .fig4 p, .fig5 p{
+        font-size: 20px;
+    }
+
+
+
+
+}*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    /*overflow-x: hidden;*/
+}
+
+.carousel {
+    width: 100%;
+    position: relative;
+    margin: 0 auto;
+}
+
+.carousel .carousel-item,
+.carousel .carousel-item-hidden {
+    display: none;
+}
+
+.carousel .carousel-item-visible {
+    display: flex;
+    width: 100%;
+    animation: fadeVisibility 0.5s;
+}
+
+.carousel .carousel-item img {
+    width: 100%;
+    height: 650px;
+}
+
+
+.carousel .carousel-actions {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.carousel .carousel-actions button {
+    border-radius: 50px;
+    background-color: white;
+    border: 0;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+}
+
+.carousel .carousel-actions button#carousel-button-prev {
+    margin-left: 20px;
+}
+
+.carousel .carousel-actions button#carousel-button-next {
+    margin-right: 20px;
+}
+
+
+@keyframes fadeVisibility {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.themes-nav{
+    min-height: 60px;
+    display: flex;
+    align-items: center;
+}
+
+.nav-container{
+    padding-left: 10px;
+    padding-right: 10px ;
+    width:950px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-container a{
+    min-width: 170px;
+    margin-top: 30px;
+    text-decoration: none;
+    padding: 5px 10px 5px 10px;
+    border: 1.5px solid rgb(153, 153, 153);
+    font-size: 23px;
+    color: rgb(51, 51, 51);
+    text-align: center;
+}
+
+.heading{
+    max-width: 1250px;
+    margin: 0 auto;
+}
+
+.heading h1 {
+    max-width: 1250px;
+    font-weight: bold;
+    margin-top:20px;
+    font-size: 35px;
+}
+
+.section{
+    margin-top: 15px;
+    min-height: 600px;
+    margin-bottom: 10px;
+
+}
+
+.section-container{
+    max-width: 1250px;
+    margin: 0 auto;
+    gap: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.fig1 img, .fig2 img{
+
+    height: 300px;
+    width: 100%;
+}
+
+.fig1 {
+    width: 59%;
+    height: 300px;
+}
+
+.fig2 {
+    width: 39%;
+    height: 300px;
+}
+
+
+.fig3, .fig4, .fig5{
+    width: 32%;
+    height: 300px;
+
+}
+
+.fig3 img, .fig4 img, .fig5 img{
+    height: 100%;
+    width: 100%;
+}
+
+.fig1, .fig2, .fig3, .fig4, .fig5{
+    position: relative;
+    transition: all 300ms;
+}
+
+.fig1:hover, .fig2:hover, .fig3:hover, .fig4:hover, .fig5:hover{
+    transform: scale(1.05);
+    cursor: pointer;
+}
+
+.fig1 p, .fig2 p, .fig3 p, .fig4 p, .fig5 p{
+    position: absolute;
+    bottom: 8px;
+    left: 16px;
+    font-size: 20px;
+    border-radius:4px;
+    padding:4px;
+    margin:2px;
+    background-color: #D3D3D3;
+    opacity: .7;
+
+}
+
+@media (max-width: 1000px){
+    .fig1, .fig2, .fig3, .fig4, .fig5{
+        width: 46%;
+        margin-left: 10px;
+        margin-right: 10px;
+
+    }
+}
+
+@media (max-width: 700px) {
+    .carousel{
+       height: 300px;
+    }
+
+    .carousel .carousel-item img {
+        height: 300px;
+    }
+
+    .nav-container{
+        gap: 12px;
+        justify-content: center;
+    }
+
+    .heading{
+        margin-left: 10px;
+    }
+
+    .heading h1{
+        font-size: 25px;
+    }
+
+    .fig1, .fig2, .fig3, .fig4, .fig5{
+        width: 100%;
+        margin-left: 10px;
+        margin-right: 10px;
+        gap: 1px;
+    }
+
+    .fig1:hover, .fig2:hover, .fig3:hover, .fig4:hover, .fig5:hover{
+        transform: none;
+    }
+
+    .fig1, .fig2, .fig3, .fig4, .fig5{
+        transition: none;
+    }
+
+    .fig1 img:hover, .fig2 img:hover, .fig3 img:hover, .fig4 img:hover, .fig5 img:hover{
+        opacity: 0.8;
+    }
+
+    .fig1 p, .fig2 p, .fig3 p, .fig4 p, .fig5 p{
+        font-size: 20px;
+    }
+
+
+
+
+}

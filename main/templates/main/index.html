@@ -1,0 +1,54 @@
+{% extends 'main/layout.html' %}
+
+{% load static %}
+
+{% block styles %}<link rel="stylesheet" href="{% static 'main/css/index.css' %}">{% endblock %}
+
+{% block title %}Virtuaalmuuseum{% endblock %}
+
+{% block content %}
+<div class="carousel">
+        <div class="carousel-item carousel-item-visible">
+            <img src="static/images/slider_1.jpeg" alt="">
+        </div>
+        <div class="carousel-item">
+            <img src="static/images/slider_2.jpeg" alt="">
+        </div>
+        <div class="carousel-item">
+            <img src="static/images/slider_3.jpeg" alt="">
+        </div>
+        <div class="carousel-actions">
+            <button id="carousel-button-prev" aria-label="Previous"><span>&lt;</span></button>
+            <button id="carousel-button-next" aria-label="Next"><span>&gt;</span></button>
+        </div>
+    </div>
+
+    <nav class="themes-nav">
+        <div class="nav-container">
+            <a href="{% url 'sport' %}">Sport</a>
+            <a href="{% url 'politics' %}">Poliitika</a>
+            <a href="{% url 'tech' %}">Tehnoloogia</a>
+            <a href="{% url 'architecture' %}"">Arhitektuur</a>
+            <a href="{% url 'music' %}">Muusika</a>
+        </div>
+    </nav>
+
+    <div class="heading">
+        <h1>Meie soovitused</h1>
+    </div>
+
+    <div class="section">
+        <div class="section-container">
+<!--            <div id="fig1" class="fig1"><img src="static/images/Carlos%20Caszély.jpeg" alt="Carlos Caszély"><p>Sport. Carlos Caszély</p></div>-->
+<!--            <div id="fig2" class="fig2"><img src="static/images/martin.jpeg" alt="Martin Luther King"><p>Poliitika. Martin Luther King</p></div>-->
+<!--            <div id="fig3" class="fig3"><img src="static/images/Grammofon.jpeg" alt="Grammofon"><p>Tehnoloogia. Grammofon</p></div>-->
+<!--            <div id="fig4" class="fig4"><img src="static/images/coliseo.jpeg" alt="Colosseum"><p>Arhitektuur. Colosseum</p></div>-->
+<!--            <div id="fig5" class="fig5"><img src="static/images/michel_jackson.jpeg" alt="Michael Jackson"><p>Muusika. Michael Jackson</p></div>-->
+
+            {% for el in section %}
+                <div id="fig{{ el.id }}" class="fig{{ el.id }}"><img src="{{ el.image.url }}" alt="{{ el.sub_theme }}"><p>{{ el.theme }}. {{ el.sub_theme }}</p></div>
+            {% endfor %}
+
+        </div>
+    </div>
+{% endblock %}
